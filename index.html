@@ -1,3 +1,37 @@
+
+<script>
+    function validateForm() {
+
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        document.getElementById("nameError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+        document.getElementById("messageError").innerText = "";
+
+        var isValid = true;
+
+        if (name == "") {
+            document.getElementById("nameError").innerText = "Please enter your name";
+            isValid = false;
+        }
+
+        if (email == "") {
+            document.getElementById("emailError").innerText = "Please enter your email";
+            isValid = false;
+        }
+
+        if (message == "") {
+            document.getElementById("messageError").innerText = "Please enter a message";
+            isValid = false;
+        }
+
+        return isValid;
+    }
+</script>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,7 +47,31 @@
     <img src="https://via.placeholder.com/300" alt="Profile picture of Sara Ranjbar">
     <section>
         <h2>Contact Me</h2>
-        <form>
+
+        <form onsubmit="return validateForm()">
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name"><br>
+            <span id="nameError" style="color:red;"></span>
+
+            <br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email"><br>
+            <span id="emailError" style="color:red;"></span>
+
+            <br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message"></textarea><br>
+            <span id="messageError" style="color:red;"></span>
+
+            <br><br>
+
+            <button type="submit">Send</button>
+
+        </form>
+<!--        <form>
             <label for="name">FullName:</label>
             <input type="text" id="name" name="name">
             <br><br>
@@ -26,7 +84,7 @@
             <br><br>
             <button type="submit">Send</button>
 
-        </form>
+        </form>-->
 
     </section>
 
