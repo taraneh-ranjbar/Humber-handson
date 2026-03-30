@@ -75,6 +75,10 @@
                 color: white;
                 border: none;
             }
+            img{
+                width: 120px;
+                height: 120px;
+            }
         </style>
     </head>
     <body>
@@ -83,26 +87,26 @@
     <p>Sara Ranjbar</p>
 </header>
 <main>
-    <img src="https://via.placeholder.com/300" alt="Profile picture of Sara Ranjbar">
+    <img src="image/me.JPG" alt="Profile picture of Sara Ranjbar">
     <section>
         <h2>Contact Me</h2>
 
         <form onsubmit="return validateForm()">
 
-            <label for="name">Name:</label><br>
-            <input type="text" id="name"><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
             <span id="nameError" style="color:red;"></span>
 
             <br><br>
 
-            <label for="email">Email:</label><br>
-            <input type="text" id="email"><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email">
             <span id="emailError" style="color:red;"></span>
 
             <br><br>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message"></textarea><br>
+            <label for="message">Message:</label>
+            <textarea id="message"></textarea>
             <span id="messageError" style="color:red;"></span>
 
             <br><br>
